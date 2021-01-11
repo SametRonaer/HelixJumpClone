@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CollisionManager.cs" />
     <Compile Include="Assets\Scripts\Control.cs" />
+    <Compile Include="Assets\Scripts\SetFracture.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -599,6 +600,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -617,17 +621,29 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    <Reference Include="Unity.Formats.Fbx.Editor">
+      <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Unity.Formats.Fbx.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Fbx">
+      <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Autodesk.Fbx.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Fbx.Runtime">
+      <HintPath>C:/Users/Samet/Desktop/Unity/HelixJumpClone/HelixJumpClone/Library/ScriptAssemblies/Unity.Formats.Fbx.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

@@ -8,24 +8,23 @@ public class CollisionManager : MonoBehaviour
     Rigidbody rb;
     [SerializeField] float jumpForce = 10f;
     GameObject paintSplash;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     private void OnCollisionEnter(Collision collision)
     {
-        paintSplash = Instantiate(paintPattern, transform.GetChild(0).gameObject.transform.position, Quaternion.identity);
-        paintSplash.transform.parent = collision.gameObject.transform;
+       // paintSplash = Instantiate(paintPattern, transform.GetChild(0).gameObject.transform.position, Quaternion.identity);
+        //paintSplash.transform.parent = collision.gameObject.transform;
         //Instantiate(paintPattern, collision.transform.position, Quaternion.identity);
         rb.AddForce(new Vector3(0,jumpForce,0));
-        print(collision.transform.position);
+        anim.SetTrigger("bounce");
+        //print(collision.transform.position);
     }
 }
