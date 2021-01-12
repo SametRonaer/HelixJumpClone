@@ -11,6 +11,7 @@ public class SetFracture : MonoBehaviour
     GameObject parentDisc;
     GameObject fractureCells;
     GameObject forcePoint;
+    GameObject killArea;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,9 @@ public class SetFracture : MonoBehaviour
         parentDisc = transform.parent.gameObject;
         fractureCells = parentDisc.transform.GetChild(0).gameObject;
         forcePoint = parentDisc.transform.GetChild(1).gameObject;
+        killArea = parentDisc.transform.GetChild(3).gameObject;
+
+        
 
     }
 
@@ -26,9 +30,16 @@ public class SetFracture : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Trigger");
+        
         fractureCells.SetActive(true);
         transform.parent.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        if (killArea)
+        {
+         Destroy(killArea);
+        //Vector3 killAreForceDirection = killArea.transform.position - forcePoint.transform.position;
+        //killArea.GetComponent<Rigidbody>().AddForce(killAreForceDirection * forceAmount);
+        //killArea.GetComponent<Rigidbody>().useGravity = true;
+        }
         foreach(Transform t in fractureCells.transform)
         {
             t.gameObject.AddComponent<Rigidbody>();
