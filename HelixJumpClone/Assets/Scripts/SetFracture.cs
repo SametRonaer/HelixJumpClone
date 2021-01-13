@@ -15,7 +15,7 @@ public class SetFracture : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Time.timeScale = 1;
+       
         parentDisc = transform.parent.gameObject;
         fractureCells = parentDisc.transform.GetChild(0).gameObject;
         forcePoint = parentDisc.transform.GetChild(1).gameObject;
@@ -35,20 +35,23 @@ public class SetFracture : MonoBehaviour
         transform.parent.gameObject.GetComponent<MeshRenderer>().enabled = false;
         if (killArea)
         {
+        
          Destroy(killArea);
-        //Vector3 killAreForceDirection = killArea.transform.position - forcePoint.transform.position;
-        //killArea.GetComponent<Rigidbody>().AddForce(killAreForceDirection * forceAmount);
-        //killArea.GetComponent<Rigidbody>().useGravity = true;
+  
         }
         foreach(Transform t in fractureCells.transform)
         {
             t.gameObject.AddComponent<Rigidbody>();
-            //t.gameObject.GetComponent<Rigidbody>().useGravity = false;
             Vector3 direction = t.position - forcePoint.transform.position;
             t.gameObject.GetComponent<Rigidbody>().AddForce(direction * forceAmount);
         }
-       // ChangeMesh();
-       // AddForceToFractures();
-       Destroy(gameObject);
+        foreach (Transform t in parentDisc.transform)
+        {
+            if (t.gameObject.tag == "Paint")
+            {
+                Destroy(t.gameObject);
+            }
+        }
+        Destroy(gameObject);
     }
 }

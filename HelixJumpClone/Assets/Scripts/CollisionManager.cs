@@ -33,8 +33,9 @@ public class CollisionManager : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-       //paintSplash = Instantiate(paintPattern, transform.GetChild(0).gameObject.transform.position, transform.GetChild(0).gameObject.transform.rotation);
-       //paintSplash.transform.parent = collision.gameObject.transform;
+       paintSplash = Instantiate(paintPattern, transform.GetChild(0).gameObject.transform.position, transform.GetChild(0).gameObject.transform.rotation);
+       //paintSplash.transform.localScale = transform.GetChild(0).localScale;
+       paintSplash.transform.parent = collision.gameObject.transform;
       
        
         if (!kill)
