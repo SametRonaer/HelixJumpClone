@@ -17,7 +17,6 @@ public class Restart : MonoBehaviour
     {
         if(Input.touchCount > 0)
         {
-            print("Restart");
             SceneManager.LoadScene(0);
         }
     }

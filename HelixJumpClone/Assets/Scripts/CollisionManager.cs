@@ -42,6 +42,10 @@ public class CollisionManager : MonoBehaviour
         rb.AddForce(new Vector3(0,jumpForce,0));
         anim.SetTrigger("bounce");
         }
+        if(collision.gameObject.tag == "LastDisc")
+        {
+            print("Finish");
+        }
         //print(collision.transform.position);
     }
 

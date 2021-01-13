@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CollisionManager.cs" />
     <Compile Include="Assets\Scripts\Control.cs" />
+    <Compile Include="Assets\Scripts\LevelCreator.cs" />
     <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\SetFracture.cs" />
     <Reference Include="UnityEngine">
